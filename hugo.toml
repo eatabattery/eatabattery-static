@@ -1,7 +1,6 @@
 baseURL = "https://eatabattery.com/"
 languageCode = "en-us"
 title = "Alkaline Heros"
-theme = ""
 
 [params]
 description = "Welcome to EataBattery.com, the central site for all things rechargable, dischargable, and alkaline!"
@@ -67,4 +66,5 @@ section = ["HTML", "RSS"]
 extended = true
 min = "0.110.0"
 
-theme = "hugo-bearblog"
+[[module.imports]]
+path = "github.com/janraasch/hugo-bearblog"
