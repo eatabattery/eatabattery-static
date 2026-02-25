@@ -1,0 +1,3 @@
+[submodule "DetectiveBuckPasser"]
+	path = DetectiveBuckPasser
+	url = git@github.com:snhobbs/DetectiveBuckPasser.git

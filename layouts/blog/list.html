@@ -1,0 +1,24 @@
+{{ define "page_title" }}Blog{{ end }}
+
+{{ define "main" }}
+<div class="container">
+  <div class="row">
+    <div class="col-md-9 middle">
+      {{ range .Pages.ByDate.Reverse }}
+      <div class="blog-post">
+        <h2><a href="{{ .Permalink }}">{{ .Title }}</a></h2>
+        <h6 class="post-meta">
+          Posted by:
+          {{ range .Params.authors }}<a href="/authors/{{ . | urlize }}/">{{ . }}</a>{{ end }}
+          &nbsp;{{ .Date.Format "January 2, 2006" }}
+        </h6>
+        <p>{{ .Description }}</p>
+        <a href="{{ .Permalink }}" class="label-inverse">read more…</a>
+        <hr>
+      </div>
+      {{ end }}
+    </div>
+    {{ partial "blog-sidebar.html" . }}
+  </div>
+</div>
+{{ end }}

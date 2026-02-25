@@ -1,0 +1,103 @@
+{{ define "page_title" }}{{ end }}
+
+{{ define "extra_css" }}
+<link href="/css/eatabattery.css" rel="stylesheet">
+<link href="/css/carouselHero.css" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+<div class="container" style="padding:60px 0 0 0;border:0;">
+  <div class="container" style="padding:0;margin:0 0 50 50;">
+    <div class="carousel fade-carousel slide" data-ride="carousel" data-interval="10000" id="bs-carousel">
+
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#bs-carousel" data-slide-to="0" class="active"></li>
+        <li data-target="#bs-carousel" data-slide-to="1"></li>
+        <li data-target="#bs-carousel" data-slide-to="2"></li>
+        <li data-target="#bs-carousel" data-slide-to="3"></li>
+        <li data-target="#bs-carousel" data-slide-to="4"></li>
+      </ol>
+
+      <div class="overlay"></div>
+
+      <div class="carousel-inner">
+        <div class="item slides active">
+          <div class="slideImage" style="background-image: url(/img/Commitment.jpg);"></div>
+          <div class="hero">
+            <hgroup>
+              <h2 style="font-size:40px">{ Commitment }</h2>
+              <div class="container" style="margin:40px;"></div>
+              <p>
+                Your hair is jet black<br>
+                Your eyes colored alkaline<br>
+                Bring me more nine volts
+              </p>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="item slides">
+          <div class="slideImage" style="background-image: url(/img/Chicago.jpg);"></div>
+          <div class="hero">
+            <hgroup>
+              <h2 style="font-size:40px">{ Chicago }</h2>
+              <div class="container" style="margin:40px;"></div>
+              <p>
+                The air is a knife<br>
+                My butt is starting to sting<br>
+                Take out the charger
+              </p>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="item slides">
+          <div class="slideImage" style="background-image: url(/img/It_Keeps_Going.jpg);"></div>
+          <div class="hero">
+            <hgroup>
+              <h2 style="font-size:40px">{ It Keeps Going }</h2>
+              <div class="container" style="margin:40px;"></div>
+              <p>
+                The cool air whispers<br>
+                "Two for one Duracell Deal"<br>
+                Just when will it end?
+              </p>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="item slides">
+          <div class="slideImage" style="background-image: url(/img/Photograph.jpg);"></div>
+          <div class="hero">
+            <hgroup>
+              <h2 style="font-size:40px">{ Photograph }</h2>
+              <div class="container" style="margin:40px;"></div>
+              <p>
+                The sparks in the air<br>
+                Power flows through us tonight<br>
+                The battery night
+              </p>
+            </hgroup>
+          </div>
+        </div>
+
+        <div class="item slides">
+          <div class="slideImage" style="background-image: url(/img/Prussia.jpg);"></div>
+          <div class="hero">
+            <hgroup>
+              <h2 style="font-size:40px">{ Prussia }</h2>
+              <div class="container" style="margin:40px;"></div>
+              <p>
+                Eat the battery<br>
+                Pass me the Jagermeister<br>
+                This will take awhile
+              </p>
+            </hgroup>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+{{ end }}

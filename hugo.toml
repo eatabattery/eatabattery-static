@@ -1,0 +1,70 @@
+baseURL = "https://eatabattery.com/"
+languageCode = "en-us"
+title = "Alkaline Heros"
+theme = ""
+
+[params]
+description = "Welcome to EataBattery.com, the central site for all things rechargable, dischargable, and alkaline!"
+author = "simon"
+googleAnalytics = "UA-109318945-1"
+
+[menu]
+[[menu.main]]
+name = "Home"
+url = "/"
+weight = 1
+
+[[menu.main]]
+name = "Dumb Stuff"
+url = "#"
+weight = 2
+hasChildren = true
+
+[[menu.main]]
+name = "Kirkland Corner"
+url = "/dumb-stuff/kirkland-corner"
+parent = "Dumb Stuff"
+weight = 1
+
+[[menu.main]]
+name = "PJ"
+url = "/dumb-stuff/pj"
+parent = "Dumb Stuff"
+weight = 2
+
+[[menu.main]]
+name = "Soul4Cash"
+url = "/dumb-stuff/soul4cash"
+parent = "Dumb Stuff"
+weight = 3
+
+[[menu.main]]
+name = "Health Facts"
+url = "/healthy-living"
+weight = 3
+
+[[menu.main]]
+name = "How-To"
+url = "https://users.drew.edu/rflyr/csci4/dwbehaviors/rollover.htm"
+weight = 4
+
+[[menu.main]]
+name = "Detective Buck Passer"
+url = "/pages/buckpasser/"
+weight = 5
+
+[taxonomies]
+category = "categories"
+author = "authors"
+
+[outputs]
+home = ["HTML", "RSS"]
+section = ["HTML", "RSS"]
+
+
+[module]
+[module.hugoVersion]
+extended = true
+min = "0.110.0"
+
+theme = "hugo-bearblog"

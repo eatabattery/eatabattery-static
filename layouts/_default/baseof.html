@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="keywords" content="{{ with .Params.keywords }}{{ . }}{{ end }}">
+  <meta name="description" content="{{ with .Description }}{{ . }}{{ else }}{{ .Site.Params.description }}{{ end }}">
+  <title>{{ block "title" . }}{{ .Title }} | {{ .Site.Title }}{{ end }}</title>
+
+  <link rel="shortcut icon" href="/img/favicon.ico">
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ "/blog/index.xml" | absURL }}">
+
+  <link rel="stylesheet" href="/css/mezzanine.css">
+  <link rel="stylesheet" href="/css/bootstrap.css">
+  <link rel="stylesheet" href="/css/bootstrap-theme-altered.css">
+  <link rel="stylesheet" href="/css/eatabattery.css">
+
+  {{ block "extra_css" . }}{{ end }}
+
+  <script src="/js/jquery.js"></script>
+  <script src="/js/bootstrap.js"></script>
+  <script src="/js/bootstrap-extras.js"></script>
+  <style>
+    .navLogo { max-width: 100px; max-height: 200px; }
+  </style>
+</head>
+<body id="body">
+<a name="Top"></a>
+
+{{ partial "navbar.html" . }}
+
+<div class="container">
+  <div style="padding:25px"></div>
+  <h1>{{ block "page_title" . }}{{ end }}</h1>
+</div>
+
+{{ block "main" . }}{{ end }}
+
+{{ partial "footer.html" . }}
+
+<!-- Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id={{ .Site.Params.googleAnalytics }}"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', '{{ .Site.Params.googleAnalytics }}');
+</script>
+</body>
+</html>

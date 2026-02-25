@@ -1,0 +1,67 @@
+{{ define "title" }}Home | {{ .Site.Title }}{{ end }}
+{{ define "page_title" }}{{ end }}
+
+{{ define "main" }}
+<div class="container" style="padding:60px 0 0 0;border:0;">
+  <div class="container">
+
+    <div class="row" style="max-width:50%;margin-left: auto; margin-right: auto;">
+      <div class="col-md-12 img-responsive">
+        <img src="/img/name.png" class="img-responsive" alt="Alkaline Heros">
+      </div>
+    </div>
+
+    <span style="text-align:center; padding: 0 60px 0 0">
+      <h3>The Site Most Recently Banned From Reddit!</h3>
+    </span>
+
+    <div class="row">
+      <!-- Crucial Stuff -->
+      <div class="col-md-4 left" style="max-width:100%">
+        <h2>Crucial Stuff</h2>
+        <ul>
+          {{ $crucial := where .Site.RegularPages "Params.categories" "intersect" (slice "crucial-stuff") }}
+          {{ range $crucial.ByDate.Reverse }}
+          <li>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="row">
+              <div class="col-md-12">
+                <div class="recent-summary">
+                  <p>{{ .Description }}</p>
+                  <a href="{{ .Permalink }}" class="label-inverse">read more…</a>
+                  <hr>
+                </div>
+              </div>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+
+      <!-- Battery Widget -->
+      <div class="col-md-4 middle">
+        {{ partial "battery.html" . }}
+      </div>
+
+      <!-- News -->
+      <div class="col-md-4 right">
+        <h2>News &amp; <del>Mis</del>information</h2>
+        <ul>
+          {{ $news := where .Site.RegularPages "Params.categories" "intersect" (slice "news") }}
+          {{ range $news.ByDate.Reverse }}
+          <li>
+            <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+            <div class="recent-summary" width="100px">
+              <p>{{ .Description }}</p>
+              <a href="{{ .Permalink }}" class="label-inverse">read more…</a>
+              <hr>
+            </div>
+          </li>
+          {{ end }}
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</div>
+{{ end }}

@@ -1,0 +1,22 @@
+<div class="container" id="battery">
+  <div id="nipple">
+    <div id="padRight"></div>
+    <div id="centerNip"></div>
+    <div id="padLeft"></div>
+  </div>
+  <div id="top">
+    <br>
+    <input type="button" value="Eat it" id="audio">
+    <script>
+      document.getElementById('audio').onclick = function(){
+        var audio = new Audio("/audio/speech.wav");
+        audio.play();
+      }
+    </script>
+  </div>
+  <div id="bottom">
+    <div id="label">
+      <a href="/healthy-living/">Duracell®</a>
+    </div>
+  </div>
+</div>

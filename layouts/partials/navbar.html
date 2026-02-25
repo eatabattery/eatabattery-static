@@ -1,0 +1,58 @@
+<nav class="navbar navbar-expand-md navbar-light bg-light fixed-top">
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+  <div class="container">
+    <div class="col-sm-2 pull-left">
+      <a href="{{ "/" | absURL }}">
+        <img class="navLogo img-thumbnail img-responsive" src="/img/logo.png" alt="Alkaline Heros">
+      </a>
+    </div>
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+        <span class="sr-only">Toggle Navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="{{ "/" | absURL }}">Alkaline Heros</a>
+    </div>
+    <div class="navbar-collapse collapse">
+      <ul class="nav navbar-nav">
+        {{ range .Site.Menus.main }}
+          {{ if .HasChildren }}
+
+          {{/* Dropdown item */}}
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" href="#"
+              role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              {{ .Name }}
+            </a>
+            <ul class="dropdown-menu">
+              {{ range .Children }}
+              <li>
+                <a class="dropdown-item{{ if eq $.RelPermalink .URL }} active{{ end }}"
+                  href="{{ .URL }}">{{ .Name }}</a>
+              </li>
+              {{ end }}
+            </ul>
+          </li>
+
+          {{ else }}
+
+          {{/* Regular item */}}
+          <li class="nav-item">
+            <a class="nav-link{{ if or (and (eq .URL "/") $.IsHome) (and (ne .URL "/") (eq $.RelPermalink .URL)) }} active{{ end }}"
+              href="{{ .URL }}">{{ .Name }}</a>
+          </li>
+
+          {{ end }}
+        {{ end }}
+
+ 
+      </ul>
+    </div>
+  </div>
+</div>
+</nav>
+
+<!--
+-->

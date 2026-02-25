@@ -1,0 +1,24 @@
+{{ define "page_title" }}{{ end }}
+
+{{ define "extra_css" }}
+<link href="/css/eatabattery.css" rel="stylesheet">
+<link href="/css/carouselHero.css" rel="stylesheet">
+{{ end }}
+
+{{ define "main" }}
+<div class="container" style="padding:60px 0 0 0;border:0;">
+  <div class="container vertical-text" style="margin:100px">
+    <div class="row">
+      <div class="col-md-3 left">
+        <div class="thumbnail" style="max-width:5%;min-width:250px;">
+          <img class="thumbnail" src="/img/batteryDeath.gif" style="width:100%" alt="Battery dying">
+        </div>
+      </div>
+      <div class="col-md-6 middle">
+        {{ partial "battery.html" . }}
+      </div>
+      <div class="col-md-3 right"></div>
+    </div>
+  </div>
+</div>
+{{ end }}
