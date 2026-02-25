@@ -1,4 +1,5 @@
-baseURL = "https://eatabattery.com/"
+#baseURL = "https://eatabattery.com/"
+baseURL = "https://eatabattery.github.io/eatabattery-static/"
 languageCode = "en-us"
 title = "Alkaline Heros"
 
