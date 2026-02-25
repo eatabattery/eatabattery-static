@@ -1,7 +1,8 @@
-#baseURL = "https://eatabattery.com/"
-baseURL = "https://eatabattery.github.io/eatabattery-static/"
-relativeURLs = true
-canonifyURLs = false
+baseURL = "https://eatabattery.com/"
+#relativeURLs = true
+#canonifyURLs = false
+relativeURLs = false
+canonifyURLs = true
 languageCode = "en-us"
 title = "Alkaline Heros"
 
