@@ -1,5 +1,5 @@
-#baseURL = "https://eatabattery.com/"
-baseURL = "https://eatabattery.github.io/eatabattery-static/"
+baseURL = "https://eatabattery.com/"
+#baseURL = "https://eatabattery.github.io/eatabattery-static/"
 #relativeURLs = true
 #canonifyURLs = false
 relativeURLs = false
